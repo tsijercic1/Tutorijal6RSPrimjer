@@ -30,6 +30,13 @@ public class Main {
         System.out.println(LocalDate.of(2020, 2, 4));
         Interface variable = new InstagramUser("a", "asdasd", "sdasd", 55);
         variable.two();
-
+        System.out.println(
+                new ArrayList<Integer>(
+                        Arrays.asList(1, 2, 3, 4, 5)
+                ).stream().reduce(0,(a,b)->{
+                    System.out.println(a);
+                    return a + b;
+        })
+        );
     }
 }
