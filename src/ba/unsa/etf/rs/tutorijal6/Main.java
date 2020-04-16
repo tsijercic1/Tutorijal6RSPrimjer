@@ -23,14 +23,15 @@ public class Main {
                 }).collect(Collectors.toList());
         System.out.println("---------------------------");
         System.out.println(facebookUsers);
-        facebookUsers.stream().filter(new Predicate<FacebookUser>() {
+        facebookUsers = (ArrayList<FacebookUser>) facebookUsers.stream().filter(new Predicate<FacebookUser>() {
             @Override
             public boolean test(FacebookUser facebookUser) {
-                return !facebookUser.getBirthday().isAfter(LocalDate.of(2020, 1, 1))
-                        || !facebookUser.getBirthday().isBefore(LocalDate.of(2020, 2, 3));
+                return !facebookUser.getBirthday().isAfter(LocalDate.of(2020, 2, 1))
+                        || !facebookUser.getBirthday().isBefore(LocalDate.of(2020, 3, 4));
             }
-
-        });
-
+        }).collect(Collectors.toList());
+        Functional functional = facebookUsers.get(1);
+        functional.doSomething("5555555555555555555");
+        System.out.println(LocalDate.of(2020, 2, 4));
     }
 }

@@ -2,7 +2,7 @@ package ba.unsa.etf.rs.tutorijal6;
 
 import java.time.LocalDate;
 
-public class FacebookUser extends User {
+public class FacebookUser extends User implements Functional{
     private String displayName;
     private LocalDate birthday;
 
@@ -39,5 +39,10 @@ public class FacebookUser extends User {
                 "displayName='" + displayName + '\'' +
                 ", birthday=" + birthday +
                 '}';
+    }
+
+    @Override
+    public void doSomething(String param) {
+        System.out.println(param+getBirthday());
     }
 }
