@@ -31,4 +31,13 @@ public class FacebookUser extends User {
     public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
+
+    @Override
+    public String toString() {
+        return "FacebookUser{" +
+                super.toString() +
+                "displayName='" + displayName + '\'' +
+                ", birthday=" + birthday +
+                '}';
+    }
 }
