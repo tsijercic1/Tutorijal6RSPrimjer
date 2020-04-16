@@ -1,6 +1,6 @@
 package ba.unsa.etf.rs.tutorijal6;
 
-public class InstagramUser extends User {
+public class InstagramUser extends User implements Interface{
     private String page;
     private Integer numberOfFollowers;
 
@@ -30,4 +30,5 @@ public class InstagramUser extends User {
     public void setNumberOfFollowers(Integer numberOfFollowers) {
         this.numberOfFollowers = numberOfFollowers;
     }
+
 }
