@@ -30,5 +30,6 @@ public class Main {
         System.out.println(LocalDate.of(2020, 2, 4));
         Interface variable = new InstagramUser("a", "asdasd", "sdasd", 55);
         variable.two();
+
     }
 }

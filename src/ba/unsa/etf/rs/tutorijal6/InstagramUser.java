@@ -31,4 +31,8 @@ public class InstagramUser extends User implements Interface{
         this.numberOfFollowers = numberOfFollowers;
     }
 
+    @Override
+    public void two() {
+        System.out.println("OVO JE IMPLEMENTACIJA KOJA OVERRIDE-A DEFAULT IMPLEMENTACIJU");
+    }
 }
