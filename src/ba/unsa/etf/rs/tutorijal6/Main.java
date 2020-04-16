@@ -3,6 +3,7 @@ package ba.unsa.etf.rs.tutorijal6;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -22,7 +23,14 @@ public class Main {
                 }).collect(Collectors.toList());
         System.out.println("---------------------------");
         System.out.println(facebookUsers);
+        facebookUsers.stream().filter(new Predicate<FacebookUser>() {
+            @Override
+            public boolean test(FacebookUser facebookUser) {
+                return !facebookUser.getBirthday().isAfter(LocalDate.of(2020, 1, 1))
+                        || !facebookUser.getBirthday().isBefore(LocalDate.of(2020, 2, 3));
+            }
 
+        });
 
     }
 }
